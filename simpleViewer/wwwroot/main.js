@@ -27,6 +27,7 @@ async function setupModelSelection(viewer, selectedUrn) {
 }
 
 async function setupModelUpload(viewer) {
+
     const upload = document.getElementById('upload');
     const input = document.getElementById('input');
     const models = document.getElementById('models');
