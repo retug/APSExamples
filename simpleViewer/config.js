@@ -15,5 +15,7 @@ module.exports = {
     APS_CLIENT_ID,
     APS_CLIENT_SECRET,
     APS_BUCKET,
-    PORT
+    PORT,
 };
+
+

@@ -2,29 +2,7 @@
 
 async function getAccessToken(callback) {
     try {
-        const clientId = "<________________________________________>"
-        const clientSecret = "<________________________________________>"
-
-        // Base64 encode the client ID and client secret
-        const concatword = clientId + ":" + clientSecret;
-        const base64word = btoa(concatword);
-
-        const url = 'https://developer.api.autodesk.com/authentication/v2/token';
-        const body = new URLSearchParams({
-            'grant_type': 'client_credentials',
-            'scope': 'data:read'
-        });
-
-        const resp = await fetch(url, {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded',
-                'Authorization': 'Basic ' + base64word
-            },
-            body: body
-        });
-
-        //const resp = await fetch('/api/auth/token');
+        const resp = await fetch('/api/auth/token');
         if (!resp.ok) {
             throw new Error(await resp.text());
         }
